@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Syed Umar Ali | Project Manager & Senior Technical Recruiter</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+
+    /* Print-specific rules: When printing/saving as PDF, ONLY render the A4 Resume Sheet */
+    @media print {
+      @page {
+        size: A4;
+        margin: 10mm 12mm;
+      }
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      #printable-resume {
+        display: block !important;
+        box-shadow: none !important;
+        border: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-white">
+
+  <!-- ==================== PORTFOLIO WEBSITE (HIDDEN DURING PDF PRINT) ==================== -->
+  <div class="no-print">
+    <!-- Top Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/85 border-b border-slate-800">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-2.5">
+          <span class="w-9 h-9 rounded-lg bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center text-emerald-400 font-bold text-lg">SU</span>
+          <div>
+            <span class="font-bold tracking-tight text-white block leading-none">Syed Umar Ali</span>
+            <span class="text-xs text-slate-400">Project Manager • Operations • Tech Recruiting</span>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm text-slate-300">
+          <a href="#about" class="hover:text-emerald-400 transition">About</a>
+          <a href="#experience" class="hover:text-emerald-400 transition">Experience</a>
+          <a href="#projects" class="hover:text-emerald-400 transition">Projects</a>
+          <a href="#skills" class="hover:text-emerald-400 transition">Skills</a>
+          <a href="#resume-preview" class="hover:text-emerald-400 transition">Resume</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button onclick="downloadResumePDF()" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-sm px-4 py-2 rounded-lg shadow-lg shadow-emerald-500/20 transition">
+            <i data-lucide="download" class="w-4 h-4"></i>
+            Download Resume PDF
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="about" class="relative overflow-hidden py-20 sm:py-28 border-b border-slate-800/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-medium mb-6">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Available for Project Management, Operations & Talent Leadership Roles
+        </div>
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white max-w-4xl leading-tight">
+          Bridging <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Turnkey Infrastructure</span>, Commercial Operations & AI Talent Strategy.
+        </h1>
+        <p class="mt-6 text-lg text-slate-300 max-w-3xl leading-relaxed">
+          I am <strong class="text-white">Syed Umar Ali</strong>, a Project Manager, Operations Consultant, and Senior Technical Recruiter based in Bhopal, India. Over the past 6+ years, I have managed ₹1–2 Crore commercial material portfolios, delivered compliant institutional infrastructure at <strong class="text-white">The Aureole Academy</strong>, and scaled global engineering teams at <strong class="text-white">Intellibus</strong>.
+        </p>
+
+        <!-- Key Metrics Bar -->
+        <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl">
+          <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
+            <div class="text-2xl sm:text-3xl font-bold text-emerald-400">6+ Yrs</div>
+            <div class="text-xs text-slate-400 mt-1">Project Coordination & Technical Recruitment</div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
+            <div class="text-2xl sm:text-3xl font-bold text-cyan-400">₹1–2 Cr</div>
+            <div class="text-xs text-slate-400 mt-1">Commercial Utility Supply Chain Managed</div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
+            <div class="text-2xl sm:text-3xl font-bold text-emerald-400">₹15–25L</div>
+            <div class="text-xs text-slate-400 mt-1">Institutional Turnkey Infrastructure Delivered</div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
+            <div class="text-2xl sm:text-3xl font-bold text-cyan-400">6,900+</div>
+            <div class="text-xs text-slate-400 mt-1">Hours of Audited Engineering Workflow Data</div>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="mt-10 flex flex-wrap gap-4">
+          <button onclick="downloadResumePDF()" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold px-6 py-3 rounded-xl transition">
+            <i data-lucide="file-down" class="w-5 h-5"></i>
+            Save Official Resume (PDF)
+          </button>
+          <a href="#resume-preview" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-medium px-6 py-3 rounded-xl transition">
+            <i data-lucide="eye" class="w-5 h-5"></i>
+            View Interactive Resume
+          </a>
+          <a href="https://linkedin.com/in/syed-umar-ali-34570613a" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-medium px-5 py-3 rounded-xl transition">
+            <i data-lucide="linkedin" class="w-5 h-5 text-sky-400"></i>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section id="experience" class="py-20 border-b border-slate-800/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="mb-12">
+          <h2 class="text-3xl font-bold text-white">Professional Experience</h2>
+          <p class="text-slate-400 mt-2">Verified track record across infrastructure execution, supply chain consulting, and global technical talent acquisition.</p>
+        </div>
+
+        <div class="space-y-6">
+          <!-- Aureole Academy -->
+          <div class="p-6 sm:p-8 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-emerald-500/40 transition">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-800">
+              <div>
+                <span class="inline-block text-xs font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md mb-2">Institutional Infrastructure & Operations</span>
+                <h3 class="text-xl font-bold text-white">Project Manager (Coordinator and Operational)</h3>
+                <p class="text-slate-300 font-medium">The Aureole Academy • Idgah Hills, Bhopal, India</p>
+              </div>
+              <div class="text-sm font-mono text-slate-400 bg-slate-950 px-3 py-1.5 rounded-lg border border-slate-800 self-start">
+                15 Jan 2023 – 10 Sep 2026
+              </div>
+            </div>
+            <ul class="mt-4 space-y-2.5 text-slate-300 text-sm leading-relaxed list-disc list-inside">
+              <li>Coordinated end-to-end infrastructure development and operational workflows for new school facilities, directly managing a <strong>₹15–25 Lakh</strong> water and sanitation project phase from planning to execution.</li>
+              <li>Enforced strict adherence to the <strong>Madhya Pradesh Bhumi Vikas Niyam</strong> and <strong>National Building Code of India (IS 1172)</strong> standards, ensuring structural and sanitary modifications met all municipal health and safety regulations.</li>
+              <li>Centralized administrative reporting and maintained clear communication channels between management, faculty, and external technical vendors to prevent project delays.</li>
+              <li>Maintained detailed project records, compliance documentation, and daily schedules using modern project tracking tools to monitor site progress and support smooth operational handoffs.</li>
+            </ul>
+          </div>
+
+          <!-- Khan Sanitation Hardware Shops -->
+          <div class="p-6 sm:p-8 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-cyan-500/40 transition">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-800">
+              <div>
+                <span class="inline-block text-xs font-semibold uppercase tracking-wider text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded-md mb-2">Commercial Supply Chain & Technical Consulting</span>
+                <h3 class="text-xl font-bold text-white">Project Coordinator & Consultant</h3>
+                <p class="text-slate-300 font-medium">Khan Sanitation Hardware Shops • Bhopal, India</p>
+              </div>
+              <div class="text-sm font-mono text-slate-400 bg-slate-950 px-3 py-1.5 rounded-lg border border-slate-800 self-start">
+                2021 – Present (Full-Time: 2021–2023 | Consultant: 2023–Present)
+              </div>
+            </div>
+            <ul class="mt-4 space-y-2.5 text-slate-300 text-sm leading-relaxed list-disc list-inside">
+              <li>Managed supply chain logistics, inventory forecasting, and project coordination for commercial construction clients, overseeing a high-volume utility materials portfolio valued at <strong>₹1–2 Crores</strong>.</li>
+              <li>Analyzed technical blueprints using <strong>AutoCAD</strong> and <strong>Bluebeam Revu</strong> to estimate required volumes of infrastructure materials, coordinating site deliveries to match contractor timelines.</li>
+              <li>Negotiated pricing with major distributors (<strong>Asian Paints, Astral, Supreme</strong>) to control project costs and maintain profit margins.</li>
+              <li>Advised developers and site contractors on technical material specifications, including pipe pressure ratings and durability, and directed quality control initiatives to eliminate site downtime.</li>
+            </ul>
+          </div>
+
+          <!-- Intellibus -->
+          <div class="p-6 sm:p-8 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-emerald-500/40 transition">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-800">
+              <div>
+                <span class="inline-block text-xs font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md mb-2">Platform Engineering Operations & Recruitment</span>
+                <h3 class="text-xl font-bold text-white">Technical Recruiting Specialist</h3>
+                <p class="text-slate-300 font-medium">Intellibus • Remote</p>
+              </div>
+              <div class="text-sm font-mono text-slate-400 bg-slate-950 px-3 py-1.5 rounded-lg border border-slate-800 self-start">
+                Aug 2022 – Present
+              </div>
+            </div>
+            <ul class="mt-4 space-y-2.5 text-slate-300 text-sm leading-relaxed list-disc list-inside">
+              <li>Managed scheduling, remote coordination, employer branding campaigns, and pipeline reporting for the Platform Engineering Team.</li>
+              <li>Maintained meticulous project data trackers, logging over <strong>6,900+ hours</strong> of workflow data and status documentation to support executive management reporting and compliance.</li>
+            </ul>
+          </div>
+
+          <!-- Upwork & Sports Arena Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-6 rounded-2xl bg-slate-900/70 border border-slate-800">
+              <div class="text-xs font-mono text-slate-400 mb-1">2021 – Present • Remote</div>
+              <h3 class="text-lg font-bold text-white">HR & Technical Recruitment Manager</h3>
+              <p class="text-sm text-emerald-400 font-medium mb-3">Upwork (Independent Consultant)</p>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Directed independent coordination and technical hiring projects (including Senior/Lead AI Full Stack Engineer talent architecture for SoloForge LLC), managing strict timelines, contractor tax compliance, and stakeholder deliverables.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-slate-900/70 border border-slate-800">
+              <div class="text-xs font-mono text-slate-400 mb-1">Jan 2020 – Jan 2021 • Bhopal, India</div>
+              <h3 class="text-lg font-bold text-white">General Manager & Project Coordinator Associate</h3>
+              <p class="text-sm text-cyan-400 font-medium mb-3">Sports Arena</p>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Coordinated facility infrastructure upgrades, daily operational workflows, and vendor setups to ensure seamless site execution and elevated client experiences.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="py-20 border-b border-slate-800/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="mb-12">
+          <h2 class="text-3xl font-bold text-white">Featured Projects & Case Studies</h2>
+          <p class="text-slate-400 mt-2">Combining physical infrastructure management with full-stack AI software engineering.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Project 1 -->
+          <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-4">
+                <i data-lucide="cpu" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white">AI ATS Resume Analyzer</h3>
+              <p class="text-xs text-emerald-400 font-mono mt-1">Next.js • TypeScript • Tailwind • Gemini API</p>
+              <p class="text-sm text-slate-300 mt-3 leading-relaxed">
+                Built and deployed a live AI web application hosted on Vercel that parses candidate resumes, performs semantic keyword gap analysis against target job descriptions, and generates ATS-optimized content.
+              </p>
+            </div>
+            <a href="https://resumeanalyzer-fawn.vercel.app" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-400 hover:text-emerald-300">
+              Visit Live Web App <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-4">
+                <i data-lucide="building-2" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white">₹15–25L Institutional Water & Sanitation Phase</h3>
+              <p class="text-xs text-cyan-400 font-mono mt-1">IS 1172 • MP Bhumi Vikas Niyam • Turnkey Execution</p>
+              <p class="text-sm text-slate-300 mt-3 leading-relaxed">
+                Led complete infrastructure lifecycle at The Aureole Academy in Idgah Hills, Bhopal—coordinating civil vendors, municipal compliance inspections, and daily site schedules through September 2026.
+              </p>
+            </div>
+            <span class="mt-6 inline-flex items-center gap-1.5 text-xs font-medium text-slate-400">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Completed & Certified (Sep 2026)
+            </span>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-4">
+                <i data-lucide="layers" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white">₹1–2 Cr Commercial Utility Portfolio</h3>
+              <p class="text-xs text-purple-400 font-mono mt-1">AutoCAD • Bluebeam Revu • Supply Chain</p>
+              <p class="text-sm text-slate-300 mt-3 leading-relaxed">
+                Directed blueprint material takeoffs, distributor price negotiations (Astral, Supreme, Asian Paints), and multi-site delivery logistics for commercial developers across Bhopal.
+              </p>
+            </div>
+            <span class="mt-6 inline-flex items-center gap-1.5 text-xs font-medium text-slate-400">
+              <i data-lucide="briefcase" class="w-4 h-4 text-cyan-400"></i> Khan Sanitation Hardware Shops
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Tools Matrix -->
+    <section id="skills" class="py-20 border-b border-slate-800/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl font-bold text-white mb-8">Technical & Operational Stack</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
+            <h3 class="font-semibold text-emerald-400 text-sm uppercase tracking-wider mb-3">Project & Site</h3>
+            <div class="flex flex-wrap gap-2 text-xs text-slate-200">
+              <span class="px-2.5 py-1 rounded bg-slate-800">Procore</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800">MS Project</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800">AutoCAD</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800">Bluebeam Revu</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800">SafetyCulture</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800">IS 1172 Compliance</span>
+            </div>
+          </div>
+          <div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
+            <h3 class="font-semibold text-cyan-400 text-sm uppercase tracking-wider mb-3">Operations & CRM</h3>
+            <div class="flex flex-wrap gap-2 text-xs text-slate-200">
+              <span class="px-2.5 py-1 rounded bg-slate-800">ClickUp</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800">Monday.com</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800">Asana</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800">Zoho CRM</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800">SharePoint</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800">Vendor Negotiation</span>
+            </div>
+          </div>
+          <div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
+            <h3 class="font-semibold text-emerald-400 text-sm uppercase tracking-wider mb-3">AI & Web Dev</h3>
+            <div class="flex flex-wrap gap-2 text-xs text-slate-200">
+              <span class="px-2.5 py-1 rounded bg-slate-800">Next.js</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800">React</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800">TypeScript</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800">Tailwind CSS</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800">Google Gemini API</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800">Vercel</span>
+            </div>
+          </div>
+          <div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
+            <h3 class="font-semibold text-cyan-400 text-sm uppercase tracking-wider mb-3">Design & Branding</h3>
+            <div class="flex flex-wrap gap-2 text-xs text-slate-200">
+              <span class="px-2.5 py-1 rounded bg-slate-800">Figma</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800">Canva</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800">Employer Branding</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800">Technical Recruiting</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Preview Header Bar -->
+    <section id="resume-preview" class="pt-16 pb-6">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-bold text-white">Official A4 Resume Preview</h2>
+          <p class="text-sm text-slate-400">Updated with your January 15, 2023 – September 10, 2026 tenure at The Aureole Academy. Click the button to save as an A4 PDF.</p>
+        </div>
+        <button onclick="downloadResumePDF()" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-sm px-5 py-2.5 rounded-xl shadow-lg transition self-start">
+          <i data-lucide="printer" class="w-4 h-4"></i>
+          Print / Save as PDF
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== PRINTABLE A4 RESUME SHEET (VISIBLE ON SCREEN & IN PDF) ==================== -->
+  <div id="printable-resume" class="max-w-4xl mx-auto my-6 bg-white text-slate-900 shadow-2xl rounded-xl p-8 sm:p-12 border border-slate-200">
+    <!-- Resume Header -->
+    <div class="border-b-2 border-slate-900 pb-4 mb-5 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+      <div>
+        <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 uppercase">Syed Umar Ali</h1>
+        <p class="text-sm font-semibold text-slate-700 mt-0.5">Project Manager (Coordinator & Operational) • Senior Technical Recruiter</p>
+      </div>
+      <div class="text-xs text-slate-700 sm:text-right space-y-0.5">
+        <div>Bhopal, Madhya Pradesh, India • +91 786 952 2445</div>
+        <div>connect_syed.umar@yahoo.com • syed1131998@gmail.com</div>
+        <div>linkedin.com/in/syed-umar-ali-34570613a • syed-umar-ali-portfolio.vercel.app</div>
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="mb-4">
+      <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Professional Summary</h2>
+      <p class="text-xs leading-relaxed text-slate-800">
+        Operations and Project Manager with 6+ years of combined experience across turnkey infrastructure delivery, commercial supply chain coordination, and technical recruitment. Proven track record of bridging the gap between site contractors, commercial developers, and internal stakeholders to deliver projects on time and within budget. Adept at analyzing technical blueprints (AutoCAD, Bluebeam Revu), managing multi-crore utility material portfolios, enforcing strict regulatory compliance (MP Bhumi Vikas Niyam and National Building Code IS 1172), and building AI-driven recruitment and project tracking workflows.
+      </p>
+    </div>
+
+    <!-- Core Skills -->
+    <div class="mb-4">
+      <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Core Competencies & Technical Stack</h2>
+      <div class="text-xs text-slate-800 space-y-1 leading-snug">
+        <div><strong>Project & Operations:</strong> Turnkey Infrastructure Planning, End-to-End Project Tracking, Resource Allocation, Cost & Budget Control, Quality Assurance</div>
+        <div><strong>Technical Coordination:</strong> Blueprint Analysis (AutoCAD, Bluebeam Revu), Utility Materials Procurement, Technical Specifications, Vendor & Stakeholder Management</div>
+        <div><strong>Compliance & Talent Operations:</strong> Regulatory & Safety Compliance (MP Bhumi Vikas Niyam, IS 1172), Site Audits (Procore, SafetyCulture), Technical Recruiting (6+ Years)</div>
+        <div><strong>Software & AI Engineering:</strong> MS Project, Procore, ClickUp, Monday.com, Asana, Zoho CRM, Next.js, React, TypeScript, Tailwind CSS, Google Gemini API</div>
+      </div>
+    </div>
+
+    <!-- Professional Experience -->
+    <div class="mb-4">
+      <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2.5">Professional Experience</h2>
+
+      <!-- Job 1 -->
+      <div class="mb-3">
+        <div class="flex justify-between items-baseline">
+          <h3 class="text-xs font-bold text-slate-900">Project Manager (Coordinator and Operational) | The Aureole Academy</h3>
+          <span class="text-xs font-semibold text-slate-700">Jan 15, 2023 – Sep 10, 2026</span>
+        </div>
+        <div class="text-[11px] italic text-slate-600 mb-1">Idgah Hills, Bhopal, India</div>
+        <ul class="list-disc list-outside ml-4 text-xs text-slate-800 space-y-1 leading-snug">
+          <li>Coordinated end-to-end infrastructure development and operational execution for new school facilities, directly managing a ₹15–25 Lakh water and sanitation project phase from planning to completion.</li>
+          <li>Enforced strict adherence to the Madhya Pradesh Bhumi Vikas Niyam and National Building Code of India (IS 1172) standards, ensuring structural and sanitary modifications met all municipal health and safety regulations.</li>
+          <li>Centralized administrative reporting and maintained clear communication channels between management, faculty, and external technical vendors to prevent project delays.</li>
+          <li>Maintained detailed project records, compliance documentation, and daily schedules using modern project tracking tools to monitor site progress and support smooth operational handoffs.</li>
+          <li>Directed on-site resource allocation and workflow adjustments to resolve day-to-day operational challenges and material shortages.</li>
+        </ul>
+      </div>
+
+      <!-- Job 2 -->
+      <div class="mb-3">
+        <div class="flex justify-between items-baseline">
+          <h3 class="text-xs font-bold text-slate-900">Project Coordinator & Consultant | Khan Sanitation Hardware Shops</h3>
+          <span class="text-xs font-semibold text-slate-700">2021 – Present (Full-Time: 2021–2023 | Consultant: 2023–Present)</span>
+        </div>
+        <div class="text-[11px] italic text-slate-600 mb-1">Bhopal, India</div>
+        <ul class="list-disc list-outside ml-4 text-xs text-slate-800 space-y-1 leading-snug">
+          <li>Managed supply chain logistics, inventory forecasting, and project coordination for commercial construction clients, overseeing a high-volume utility materials portfolio valued at ₹1–2 Crores.</li>
+          <li>Analyzed technical blueprints using AutoCAD and Bluebeam Revu to estimate required volumes of infrastructure materials, coordinating site deliveries to match contractor timelines.</li>
+          <li>Monitored inventory for high-turnover utility materials and negotiated pricing with major distributors (Asian Paints, Astral, Supreme) to control project costs and maintain profit margins.</li>
+          <li>Advised developers and site contractors on technical material specifications, including pipe pressure ratings and durability, and directed quality control initiatives to prevent site downtime.</li>
+        </ul>
+      </div>
+
+      <!-- Job 3 -->
+      <div class="mb-3">
+        <div class="flex justify-between items-baseline">
+          <h3 class="text-xs font-bold text-slate-900">Technical Recruiting Specialist | Intellibus</h3>
+          <span class="text-xs font-semibold text-slate-700">Aug 2022 – Present</span>
+        </div>
+        <div class="text-[11px] italic text-slate-600 mb-1">Remote</div>
+        <ul class="list-disc list-outside ml-4 text-xs text-slate-800 space-y-1 leading-snug">
+          <li>Managed scheduling, remote coordination, LinkedIn recruitment campaigns, and pipeline reporting for the Platform Engineering Team.</li>
+          <li>Maintained meticulous project data trackers, logging over 6,900+ hours of workflow data and status documentation to support management reporting and compliance.</li>
+        </ul>
+      </div>
+
+      <!-- Job 4 -->
+      <div class="mb-3">
+        <div class="flex justify-between items-baseline">
+          <h3 class="text-xs font-bold text-slate-900">HR & Technical Recruitment Manager | Upwork</h3>
+          <span class="text-xs font-semibold text-slate-700">2021 – Present</span>
+        </div>
+        <div class="text-[11px] italic text-slate-600 mb-1">Remote</div>
+        <ul class="list-disc list-outside ml-4 text-xs text-slate-800 space-y-1 leading-snug">
+          <li>Directed independent coordination and technical recruitment projects (including Senior/Lead AI Full Stack Engineer hiring plans for SoloForge LLC), handling strict timelines and deliverables for multiple stakeholders concurrently.</li>
+          <li>Audited and maintained compliance tracking for contractor engagements, verifying proper tax documentation and service fee regulations.</li>
+        </ul>
+      </div>
+
+      <!-- Job 5 -->
+      <div class="mb-2.5">
+        <div class="flex justify-between items-baseline">
+          <h3 class="text-xs font-bold text-slate-900">General Manager & Project Coordinator Associate | Sports Arena</h3>
+          <span class="text-xs font-semibold text-slate-700">Jan 2020 – Jan 2021</span>
+        </div>
+        <div class="text-[11px] italic text-slate-600 mb-1">Bhopal, India</div>
+        <ul class="list-disc list-outside ml-4 text-xs text-slate-800 space-y-1 leading-snug">
+          <li>Coordinated facility infrastructure upgrades, daily operational workflows, and vendor setups to ensure seamless site execution and improved client experience.</li>
+        </ul>
+      </div>
+
+      <!-- Early Career -->
+      <div class="text-xs text-slate-800 space-y-0.5 mt-2">
+        <div class="font-bold text-slate-900">Early Career: Operations & Talent Acquisition</div>
+        <div>• <strong>Technical Recruiter | Sumeru Inc (2022):</strong> Streamlined operational processes and candidate delivery reporting for high-volume engineering projects.</div>
+        <div>• <strong>HR Associate | Million Talents India (2021–2022):</strong> Coordinated internal requirements and administrative compliance.</div>
+        <div>• <strong>Customer Service Associate | Flipkart (2021):</strong> Handled high-volume issue resolution and operational SLA ticket tracking.</div>
+      </div>
+    </div>
+
+    <!-- Projects & Education Row -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1 border-t border-slate-300">
+      <div>
+        <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-1.5">Key Technical Projects</h2>
+        <div class="text-xs text-slate-800 space-y-1 leading-snug">
+          <div><strong>AI ATS Resume Analyzer (resumeanalyzer-fawn.vercel.app):</strong> Built & deployed using Next.js, React, TypeScript, Tailwind CSS & Google Gemini API.</div>
+          <div><strong>Mariyam Maquillage (MM Cosmetics):</strong> E-commerce platform concept, branding architecture, and UI/UX specification.</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-1.5">Education</h2>
+        <div class="text-xs text-slate-800 space-y-1 leading-snug">
+          <div><strong>Bachelor of Engineering in Computer Science</strong><br/>Truba Group of Institutes, Bhopal</div>
+          <div><strong>High School Diploma (Senior Secondary)</strong><br/>Central Board of Secondary Education (CBSE)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer (Hidden in PDF Print) -->
+  <footer class="no-print py-12 border-t border-slate-800 text-center text-sm text-slate-400 mt-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <p class="font-semibold text-white">Syed Umar Ali</p>
+      <p class="mt-1">Bhopal, Madhya Pradesh, India • +91 786 952 2445 • connect_syed.umar@yahoo.com</p>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    function downloadResumePDF() {
+      const originalTitle = document.title;
+      document.title = "Syed_Umar_Ali_Resume";
+      window.print();
+      document.title = originalTitle;
+    }
+  </script>
+</body>
+</html>
